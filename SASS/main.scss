@@ -1,0 +1,277 @@
+// Importing Fonts Prata & Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Prata&display=swap');
+
+// Font Variables
+$Inter: 'Inter', sans-serif;
+$Prata: 'Prata', serif;
+
+// Colour Variables
+$Dark_Grey: #121212;
+$Grey: #808080;
+$White: #fff;
+$Yellow: rgb(255, 242, 65);
+
+// Global Styling
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: $Dark_Grey;
+}
+
+.yellow-btn {
+    background-color: $Yellow;
+    padding: .75em 1.5em;
+    font-family: $Prata;
+    display: block;
+    width: -moz-max-content;
+    width: fit-content;
+    transition: 500ms;
+}
+
+.yellow-btn:hover {
+    background-color: $White;
+}
+
+p {
+    font-family: $Inter;
+    color: $Grey;
+}
+
+.headings {
+    font-family: $Prata;
+    font-weight: 400;
+    color: $White;
+}
+
+// Nav Mobile First
+.nav-layout {
+    margin-top: 2em;
+}
+.logo {
+    color: $White;
+    font-family: $Prata;
+    font-weight: 400;
+}
+
+.hamburger {
+    transition: 750ms ease-in;
+    transform: rotate(0);
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    transform: rotate(90deg);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links-container {
+    height: 0;
+    overflow: hidden;
+    transition: 1s ease-in;
+}
+
+.nav-links-container--active {
+    height: 270px;
+}
+
+.nav-link-list {
+    padding-top: 1.5em;
+}
+
+.nav-link {
+    margin: 1.5em 0;
+    text-align: center;
+    display: block;
+}
+
+.nav-link-a {
+    font-family: $Inter;
+    color: $Grey;
+    transition: 500ms;
+}
+
+.nav-link-a:hover {
+    color: $White;
+}
+
+.nav-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+// Desktop Breakpoint Nav
+@media (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+
+    .logo-container {
+        justify-content: unset;
+    }
+
+    .nav-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links-container {
+        height: unset;
+        display: contents;
+    }
+
+    .nav-link-list {
+        padding: 0;
+        display: flex;
+    }
+
+    .nav-link {
+        margin: 0 .75em;
+    }
+}
+
+// 1st Section 
+.title-container {
+    padding-top: 4em;
+}
+
+.main-title {
+    margin-bottom: .25em;
+}
+
+.company-icons-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4em 0;
+}
+
+.company-icons-layout img {
+    margin: .5em .25em;
+    transition: 250ms;
+    image-rendering: smooth;
+}
+
+.company-icons-layout img:hover {
+    transform: scale(1.25);
+}
+
+.project-link {
+    font-size: 1.75rem;
+    display: block;
+    width: -moz-max-content;
+    width: fit-content;
+    margin: .5em 0;
+    transition: 500ms;
+}
+
+.project-link:hover {
+    color: $Grey;
+}
+
+.project-container {
+    padding: 0 0 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+// Desktop Breakpoint
+@media (min-width:900px) {
+    .projects-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5em;
+    }
+}
+
+@media (min-width:1100px) {
+    .title-container {
+        max-width: 50%;
+    }
+}
+
+// Section Two Styling
+.content-text {
+    margin: 1.5em 0;
+}
+
+.spacer-container {
+    padding-top: 4em;
+}
+
+.grey-background {
+    background-color: #80808028;
+    padding: 3em 0;
+}
+
+@media(min-width:900px) {
+    .content-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5em;
+    }
+
+    .spacer-container {
+        padding-top: 0;
+    }
+
+    .spacer {
+        margin: 0 0 1.5em 0;
+    }
+}
+
+// Section Three Styling
+.contact-container {
+    padding: 4em 0;
+}
+
+.contact-text {
+    margin: .5em 0;
+}
+
+.contact-heading {
+    font-size: 1.5rem;
+}
+
+// Tablet Changes
+@media (min-width:620px) {
+    .contact-container {
+        max-width: 75%;
+    }
+}
+
+@media (min-width:1000px) {
+    .contact-container {
+        max-width: 50%;
+    }
+}
+
+// Footer Styling
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grey-background-footer {
+    background-color: #80808028;
+    padding: 1.5em 0;
+}
+
+.social-icon {
+    margin: 0 .25em;
+    cursor: pointer;
+    transition: 250ms;
+    image-rendering: smooth;
+}
+
+.social-icon:hover {
+    transform: scale(1.25);
+}
